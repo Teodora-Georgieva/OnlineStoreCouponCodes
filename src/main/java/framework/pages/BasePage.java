@@ -28,21 +28,11 @@ public class BasePage {
     }
 
     public void waitForElementToBeClickable(WebElement element) {
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-        } catch (TimeoutException e) {
-            log.error("Element was not clickable within timeout: {}", element, e);
-            throw e;
-        }
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public void waitForElementToBeVisible(WebElement element) {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(element));
-        } catch (TimeoutException e) {
-            log.error("Element was not visible within timeout: {}", element, e);
-            throw e;
-        }
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     protected void waitForElementToBeVisible(By locator) {

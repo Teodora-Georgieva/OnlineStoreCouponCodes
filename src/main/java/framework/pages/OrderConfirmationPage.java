@@ -37,7 +37,6 @@ public class OrderConfirmationPage extends BasePage {
     }
 
     public BigDecimal getDiscountAmount() {
-        System.out.println("LOG: " + couponValue.getText().replace("–£", "").trim());
         return new BigDecimal(couponValue.getText().replace("–£", "").trim());
     }
 }
