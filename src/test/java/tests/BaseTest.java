@@ -1,23 +1,19 @@
 package tests;
 
-import context.TestContext;
 import framework.driver.DriverManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import utils.Workflow;
+import workflow.Workflow;
 
 public abstract class BaseTest {
-//    protected TestContext context;
     protected Workflow workflow;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
-        DriverManager.initializeDriver();
-//        context = new TestContext();
         workflow = new Workflow();
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         DriverManager.quitDriver();
     }

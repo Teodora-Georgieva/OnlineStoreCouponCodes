@@ -31,6 +31,7 @@ public class CheckoutPage extends BasePage {
     }
 
     public void enterAddress(String address) {
+        waitForElementToBeVisible(addressField);
         addressField.sendKeys(address);
     }
 

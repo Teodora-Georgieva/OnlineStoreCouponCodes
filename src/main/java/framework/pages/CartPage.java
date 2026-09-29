@@ -21,9 +21,6 @@ public class CartPage extends BasePage {
     @FindBy(xpath = "//span[normalize-space()='Subtotal']/following-sibling::span")
     private WebElement subtotal;
 
-//    @FindBy(xpath = "//span[contains(normalize-space(), 'Coupon')]/following-sibling::span")
-//    private WebElement discount;
-
     @FindBy(xpath = "//span[normalize-space()='Shipping']/following-sibling::span")
     private WebElement shipping;
 
@@ -95,6 +92,7 @@ public class CartPage extends BasePage {
     }
 
     public void clickProceedToCheckoutButton() {
+        waitForElementToBeClickable(proceedToCheckoutButton);
         proceedToCheckoutButton.click();
     }
 }

@@ -8,18 +8,10 @@ public class DriverManager {
 
     private DriverManager() {}
 
-    public static void initializeDriver() {
+    public static WebDriver getDriver() {
         if(webDriver.get() == null) {
             WebDriver driver = DriverFactory.createDriver(ConfigManager.getBrowser(), ConfigManager.isHeadless());
             webDriver.set(driver);
-        }
-    }
-
-    public static WebDriver getDriver() {
-        if (webDriver.get() == null) {
-            throw new IllegalStateException(
-                    "WebDriver has not been initialized. Call DriverManager.initializeDriver() first."
-            );
         }
 
         return webDriver.get();

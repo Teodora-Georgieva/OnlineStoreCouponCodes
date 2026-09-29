@@ -1,7 +1,6 @@
 package framework.pages;
 
 import framework.config.ConfigManager;
-import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +13,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-@Slf4j
 public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;

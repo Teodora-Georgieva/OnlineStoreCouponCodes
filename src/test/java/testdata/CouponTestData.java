@@ -2,7 +2,7 @@ package testdata;
 
 import java.math.BigDecimal;
 
-public abstract class TestData {
+public abstract class CouponTestData {
     public static final String VALID_COUPON = "WARACLE25";
     public static final String INVALID_COUPON = "WARACLE2";
     public static final String EMPTY_COUPON = "";
