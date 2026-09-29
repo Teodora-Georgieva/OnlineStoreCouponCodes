@@ -76,8 +76,7 @@ public class CartPage extends BasePage {
     }
 
     public BigDecimal getShippingAmount() {
-        wait.until(ExpectedConditions.not(
-                ExpectedConditions.textToBePresentInElement(shipping, "£0.00")
+        wait.until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElement(shipping, "£0.00")
         ));
 
         return new BigDecimal(shipping.getText().replace("£", "").trim());

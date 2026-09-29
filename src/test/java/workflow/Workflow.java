@@ -10,12 +10,12 @@ import utils.Utils;
 
 @Getter
 public class Workflow {
-    private LoginPage loginPage;
-    private HomePage homePage;
-    private ProductsPage productsPage;
-    private CartPage cartPage;
-    private CheckoutPage checkoutPage;
-    private OrderConfirmationPage orderConfirmationPage;
+    private final LoginPage loginPage;
+    private final HomePage homePage;
+    private final ProductsPage productsPage;
+    private final CartPage cartPage;
+    private final CheckoutPage checkoutPage;
+    private final OrderConfirmationPage orderConfirmationPage;
 
     public Workflow() {
         WebDriver driver = DriverManager.getDriver();

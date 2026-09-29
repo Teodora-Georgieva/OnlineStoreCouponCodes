@@ -2,7 +2,6 @@ package framework.pages;
 
 import framework.config.ConfigManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -19,9 +18,7 @@ public class BasePage {
 
     protected BasePage(WebDriver webDriver) {
         this.driver = webDriver;
-        this.wait = new WebDriverWait(
-                driver,
-                Duration.ofSeconds(ConfigManager.getTimeout())
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(ConfigManager.getTimeout())
         );
 
         PageFactory.initElements(driver, this);
@@ -46,7 +43,6 @@ public class BasePage {
     }
 
     protected void waitForElementsToBeVisible(List<WebElement> elements) {
-        wait.until(driver -> !elements.isEmpty()
-                && elements.stream().allMatch(WebElement::isDisplayed));
+        wait.until(driver -> !elements.isEmpty() && elements.stream().allMatch(WebElement::isDisplayed));
     }
 }

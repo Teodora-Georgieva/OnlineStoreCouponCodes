@@ -28,10 +28,6 @@ public class OrderConfirmationPage extends BasePage {
         super(webDriver);
     }
 
-    public boolean isPageDisplayed() {
-        return thankYouHeader.isDisplayed() && thankYouHeader.getText().equals(THANK_YOU_HEADER_TEXT);
-    }
-
     public BigDecimal getSubtotalAmount() {
         return new BigDecimal(subtotal.getText().replace("£", "").trim());
     }
